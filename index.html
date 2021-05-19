@@ -1,5 +1,5 @@
 
-<!-- saved from url=(0072)http://127.0.0.1:5500/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4.html -->
+<!-- saved from url=(0041)https://simple5960.github.io/static_page/ -->
 <html><script id="allow-copy_script">(function agent() {
     let unlock = false
     document.addEventListener('allow_copy', (event) => {
@@ -29,7 +29,36 @@
         capture: true,
       })
     })
-  })()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="hcSearchePopoverCustomStyle"></style></head><body contenteditable="true"><div class="fly-panel detail-box">
+  })()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script id="allow-copy_script">(function agent() {
+    let unlock = false
+    document.addEventListener('allow_copy', (event) => {
+      unlock = event.detail.unlock
+    })
+
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = (e) => {
+      if (unlock) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach((evt) => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()</script><style id="hcSearchePopoverCustomStyle"></style></head><body contenteditable="false"><div class="fly-panel detail-box">
     <h1>嵌入式系统开发与应用 - 中国大学mooc</h1>
 
     <div class="fly-detail-info">
